@@ -26,7 +26,7 @@ for (var i = 1; i < sys.args.length; i++) {
     html += "<script>//<![CDATA[\n" + src + "\n//]]></script>";
 }
 
-html = "<html><head>" + html + "</head><body></body></html>";
+html = "<html><body></body><head>" + html + "</head></html>";
 fs.write(pagePath, html, 'w');
 
 p.open("file://" + pagePath, function () {
